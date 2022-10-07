@@ -1,0 +1,13 @@
+name: Mark Pull Request as Ready To Merge
+
+on:
+  workflow_call:
+
+jobs:
+  cmd:
+    name: Ready To Merge
+    runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Ready To Merge
+        run: echo 'Ready To Merge'
