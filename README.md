@@ -12,7 +12,7 @@ This workflow is used for mark pull request as ready to merge and **should be la
 
 :warning: For using this workflow don't forget to configure the `needs` ([GA docs](https://docs.github.com/en/actions/using-workflows/advanced-workflow-features#creating-dependent-jobs)) attribute to make this workflow run last.
 
-**Path**: [`workflows/rtm.yml`](workflows/rtm.yml)
+**Path**: [`workflows/rtm.yml`](.github/workflows/rtm.yml)
 
 **Image**: [Ubuntu 20.04](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2004-Readme.md)
 
@@ -25,5 +25,5 @@ needs: # Should be latest
   - "check-code-style"
   - "..."
   - "tests"
-uses: taymyr/.github/workflows/rtm.yml@v1
+uses: taymyr/.github/.github/workflows/rtm.yml@v1
 ```
