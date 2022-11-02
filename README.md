@@ -1,8 +1,44 @@
 # Taymyr GitHub integration
 
-This repository contains a few configurations of GitHub features. For example a [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
+This repository contains a few configurations of GitHub features. For example a [Reusing workflows](#reusing-workflows) or a [Release Drafter](#release-drafter).
+
+## Release Drafter
+
+See also [documentation](https://github.com/marketplace/actions/release-drafter).
+
+**How to use**:
+
+Create a `.github/workflows/release-drafter.yml` in the repository with the following:
+
+```yaml
+name: Release Drafter
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_release_draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v5
+        with:
+          name: "<Module name> $RESOLVED_VERSION"
+          config-name: release-drafts/patch-version.yml # located in .github/ in the default branch within this or the .github repo
+          commitish: ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+As value of `config-file` parameter you can use the next variants:
+* `release-drafts/patch-version.yml`
+* `release-drafts/minor-version.yml`
+* `release-drafts/major-version.yml`
 
 ## Reusing Workflows
+
+See also [documentation](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
 
 * [Mark Pull Request as Ready To Merge](#mark-pull-request-as-ready-to-merge)
 * [Sync Labels](#sync-labels)
