@@ -5,6 +5,7 @@ This repository contains a few configurations of GitHub features. For example a 
 ## Reusing Workflows
 
 * [Mark Pull Request as Ready To Merge](#mark-pull-request-as-ready-to-merge)
+* [Sync Labels](#sync-labels)
 
 ### Mark Pull Request as Ready To Merge
 
