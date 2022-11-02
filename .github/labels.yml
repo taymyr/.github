@@ -1,0 +1,54 @@
+- name: bug
+  color: "#d73a4a"
+  description: Something isn't working
+  aliases: []
+
+- name: documentation
+  color: "#0075ca"
+  description: Improvements or additions to documentation
+  aliases: []
+
+- name: duplicate
+  color: "#cfd3d7"
+  description: This issue or pull request already exists
+  aliases: []
+
+- name: enhancement
+  color: "#a2eeef"
+  description: New feature or request
+  aliases: []
+
+- name: good first issue
+  color: "#7057ff"
+  description: Good for newcomers
+  aliases: []
+
+- name: help wanted
+  color: "#008672"
+  description: Extra attention is needed
+  aliases: []
+
+- name: invalid
+  color: "#e4e669"
+  description: This doesn't seem right
+  aliases: []
+
+- name: maintenance
+  color: "#f9d0c4"
+  description: Maintenance tasks (tools, build systems, etc)
+  aliases: []
+
+- name: question
+  color: "#d876e3"
+  description: Further information is requested
+  aliases: []
+
+- name: updates
+  color: "#86df94"
+  description: Updates of some dependencies
+  aliases: []
+
+- name: wontfix
+  color: "#ffffff"
+  description: This will not be worked on
+  aliases: []
