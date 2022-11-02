@@ -27,3 +27,19 @@ needs: # Should be latest
   - "tests"
 uses: taymyr/.github/.github/workflows/rtm.yml@v1
 ```
+
+### Sync Labels
+
+[Configuration of labels](.github/labels.yml) synchronize to all organization repositories by [Label Sync](https://github.com/marketplace/actions/label-sync) action. 
+
+**Path**: [`workflows/sync-labels.yml`](.github/workflows/sync-labels.yml)
+
+**Image**: [Ubuntu 20.04](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2004-Readme.md)
+
+**No Parameters**
+
+**How to use**:
+
+```yaml
+uses: taymyr/.github/.github/workflows/sync-labels.yml@v1
+```
