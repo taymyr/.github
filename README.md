@@ -27,6 +27,8 @@ jobs:
           name: "<Module name> $RESOLVED_VERSION"
           config-name: release-drafts/patch-version.yml # located in .github/ in the default branch within this or the .github repo
           commitish: ${{ github.ref_name }}
+          header: |
+            Optional parameter. Use it if you want to prepend information above the release notes.  
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
