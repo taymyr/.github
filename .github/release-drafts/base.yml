@@ -6,8 +6,8 @@ change-template: "- #$NUMBER $TITLE by @$AUTHOR"
 replacers:
   - search: " by @mergify"
     replace: ""
-  - search: "/Bump (.+) from (.+) to (.+) /g"
-    replace: "Bump **$1** from `$2` to `$3` "
+  - search: "/Bump (.+) from (.+) to (.+) by/g"
+    replace: "Bump **$1** from `$2` to `$3` by"
 
 exclude-contributors:
   - "dependabot"
