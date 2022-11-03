@@ -6,30 +6,35 @@ change-template: "- #$NUMBER $TITLE by @$AUTHOR"
 replacers:
   - search: " by @mergify"
     replace: ""
+  - search: "/Bump (.+) from (.+) to (.+)/g"
+    replace: "Bump **$1** from `$2` to `$3`"
+
+exclude-contributors:
+  - "dependabot"
 
 categories:
   - title: ":rocket: Features"
     labels:
-      - 'enhancement'
+      - "enhancement"
   - title: ":bug: Bug Fixes"
     labels:
       - "bug"
   - title: ":toolbox: Maintenance"
     labels:
-      - 'maintenance'
-  - title: ':arrow_up: Dependencies'
+      - "maintenance"
+  - title: ":arrow_up: Dependencies"
     labels:
-      - 'updates'
+      - "updates"
   - title: ":open_book: Documentation"
     labels:
       - "documentation"
 
 template: |
-  ## Changes
+  # :notebook: Release Notes
 
   $CHANGES
 
 footer: |
-  ## :bow: Thanks to our contributors
+  # :bow: Thanks to our contributors
   
   Special thanks to all code contributors who helped with this particular release (they are listed below)!
