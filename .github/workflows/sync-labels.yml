@@ -6,7 +6,7 @@ on:
 jobs:
   sync:
     name: Label Sync
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: EndBug/label-sync@v2
         with:
